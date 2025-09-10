@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hackathon Platform - Active Hackathons</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .sidebar-item.active {
+            background-color: #ff9800;
+            color: white;
+            border-radius: 8px;
+        }
+        .sidebar-item.active .material-icons {
+            color: white;
+        }
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            color: #4a5568;
+            transition: all 0.3s ease;
+        }
+        .sidebar-item:hover {
+            background-color: #f0f0f0;
+        }
+        .btn-new {
+            background-color: #ff4d4d;
+            color: white;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+        .card-font {
+             font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+<div class="flex h-screen">
+<aside class="w-64 bg-white shadow-md flex-shrink-0">
+<div class="p-6">
+<img alt="BitLabs Jobs Logo" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK5rn50uyQpGOhjiyPhNHDsadxTqK2Df31rUJQYXE7Lc8q8YPAgyL_9CCs5Ov88C9IEFATXzaxT9OJnrkW2b_KyeAeZw2gYv-wMjRmEY6QzeQ7xXTrjJR1om6OLcF5mDpYooIQvTHrTq4eFxHhLJABSK7DK2WbSwwpjAiSxL3y3HhBshMAXFRyRJUK43Mbh_mvD4OlrB8e4WaMd2iQAMvCWpvp3B2T55hwWiF0XxzdYlGullfOb7Oy-9oWeETNEFGffJmQvZebjRfH"/>
+</div>
+<nav class="mt-2 px-4">
+<a class="sidebar-item" href="#">
+<span class="material-icons mr-3">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="sidebar-item" href="#">
+<span class="material-icons mr-3">work_outline</span>
+<span>Recommended Jobs</span>
+</a>
+<a class="sidebar-item" href="#">
+<span class="material-icons mr-3">playlist_add_check</span>
+<span>Applied Jobs</span>
+</a>
+<a class="sidebar-item" href="#">
+<span class="material-icons mr-3">bookmark_border</span>
+<span>Saved Jobs</span>
+</a>
+<a class="sidebar-item" href="#">
+<span class="material-icons mr-3">description</span>
+<span>My Resume</span>
+</a>
+<a class="sidebar-item" href="#">
+<span class="material-icons mr-3">verified</span>
+<span>Verified Badges</span>
+<span class="ml-auto btn-new">New</span>
+</a>
+<div class="mt-4 pt-4 border-t border-gray-200">
+<a class="sidebar-item active" href="#">
+<span class="material-icons mr-3 text-white">emoji_events</span>
+<span>Hackathon</span>
+</a>
+</div>
+</nav>
+</aside>
+<div class="flex-1 flex flex-col overflow-hidden">
+<header class="bg-white shadow-sm flex justify-between items-center p-4">
+<div class="flex items-center space-x-4">
+<h1 class="text-xl font-semibold text-gray-800">Active Hackathons</h1>
+</div>
+<div class="flex items-center space-x-4">
+<button class="relative">
+<span class="material-icons text-gray-600">notifications</span>
+<span class="absolute -top-1 -right-1 h-3 w-3 bg-red-500 rounded-full border-2 border-white"></span>
+</button>
+<div class="flex items-center space-x-2">
+<img alt="User avatar" class="h-8 w-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7LnOwBazR2rPg2tp64mxxsS1K3lY5T0fK-qxHgAfIWQOxl3ROK1C90KcyHwsb-dQgM6zkGPf-hiG3S499rRv1Yk1BHSx1qoqzNgn_7p5stD4H7zpumZkPzzE4gn2mAN77UJAofQDhkp9Bgih6YjO1729l41u464vS-E15RQ9AmdsH5YJsKBAtz0t06C4yH3vOOVOR0_FkLo1dz0JP1fq5y5xnHsELNNlrkn-VvrcjFbx2GBg6J2BG581QlNSudsWzGwIUabNQ2R28"/>
+<span class="font-medium text-gray-700">John Doe</span>
+<span class="material-icons text-gray-600">arrow_drop_down</span>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50 p-6">
+<div class="bg-white p-6 rounded-lg shadow-md card-font">
+<div class="space-y-6">
+<div class="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="p-6">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-2xl font-bold text-gray-800 mb-2">AI for Social Good</h3>
+<p class="text-sm text-gray-500 max-w-2xl">
+                                        Join us in creating innovative AI solutions to tackle pressing social issues. This hackathon is open to all skill levels. Collaborate with peers, learn from mentors, and make a real-world impact.
+                                    </p>
+</div>
+<div class="flex-shrink-0 ml-6 text-right">
+<span class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">Active</span>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between text-sm text-gray-600">
+<div class="flex items-center space-x-4">
+<div class="flex items-center">
+<span class="material-icons mr-1.5 text-gray-500">calendar_today</span>
+<span>Ends in 12 days</span>
+</div>
+<div class="flex items-center">
+<span class="material-icons mr-1.5 text-gray-500">people</span>
+<span>124 Participants</span>
+</div>
+</div>
+<button class="bg-orange-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-orange-600 transition-colors duration-300">View Details</button>
+</div>
+</div>
+</div>
+<div class="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="p-6">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-2xl font-bold text-gray-800 mb-2">Future of FinTech</h3>
+<p class="text-sm text-gray-500 max-w-2xl">
+                                        Disrupt the financial industry with your coding skills. Build the next generation of payment systems, investment tools, or security protocols. Great prizes and networking opportunities.
+                                    </p>
+</div>
+<div class="flex-shrink-0 ml-6 text-right">
+<span class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">Active</span>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between text-sm text-gray-600">
+<div class="flex items-center space-x-4">
+<div class="flex items-center">
+<span class="material-icons mr-1.5 text-gray-500">calendar_today</span>
+<span>Ends in 28 days</span>
+</div>
+<div class="flex items-center">
+<span class="material-icons mr-1.5 text-gray-500">people</span>
+<span>98 Participants</span>
+</div>
+</div>
+<button class="bg-orange-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-orange-600 transition-colors duration-300">View Details</button>
+</div>
+</div>
+</div>
+<div class="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="p-6">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-2xl font-bold text-gray-800 mb-2">Sustainable Earth Challenge</h3>
+<p class="text-sm text-gray-500 max-w-2xl">
+                                        Code for our planet! Develop technology that promotes sustainability, reduces carbon footprint, or helps in conservation efforts. Your idea can contribute to a greener future.
+                                    </p>
+</div>
+<div class="flex-shrink-0 ml-6 text-right">
+<span class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">Active</span>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between text-sm text-gray-600">
+<div class="flex items-center space-x-4">
+<div class="flex items-center">
+<span class="material-icons mr-1.5 text-gray-500">calendar_today</span>
+<span>Ends in 45 days</span>
+</div>
+<div class="flex items-center">
+<span class="material-icons mr-1.5 text-gray-500">people</span>
+<span>210 Participants</span>
+</div>
+</div>
+<button class="bg-orange-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-orange-600 transition-colors duration-300">View Details</button>
+</div>
+</div>
+</div>
+<div class="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 opacity-70">
+<div class="p-6">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-2xl font-bold text-gray-500 mb-2">CyberSecurity Capture the Flag</h3>
+<p class="text-sm text-gray-400 max-w-2xl">
+                                       This event has concluded. Participants were challenged with real-world cybersecurity scenarios. Stay tuned for the announcement of winners and future events.
+                                   </p>
+</div>
+<div class="flex-shrink-0 ml-6 text-right">
+<span class="inline-block bg-gray-200 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full">Finished</span>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between text-sm text-gray-500">
+<div class="flex items-center space-x-4">
+<div class="flex items-center">
+<span class="material-icons mr-1.5">calendar_today</span>
+<span>Ended 5 days ago</span>
+</div>
+<div class="flex items-center">
+<span class="material-icons mr-1.5">people</span>
+<span>150 Participants</span>
+</div>
+</div>
+<button class="bg-gray-300 text-gray-700 font-bold py-2 px-6 rounded-lg cursor-not-allowed">View Results</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

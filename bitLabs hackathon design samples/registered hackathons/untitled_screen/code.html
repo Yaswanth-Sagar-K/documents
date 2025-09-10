@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hackathon Platform - Registered Hackathons</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .sidebar-item.active {
+            background-color: #ff9800;
+            color: white;
+            border-radius: 8px;
+        }
+        .sidebar-item.active .material-icons {
+            color: white;
+        }
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            color: #4a5568;
+            transition: all 0.3s ease;
+        }
+        .sidebar-item:hover {
+            background-color: #f0f0f0;
+        }
+        .btn-new {
+            background-color: #ff4d4d;
+            color: white;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+        .card-font {
+             font-family: 'Roboto', sans-serif;
+        }
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .status-pending {
+            background-color: #fffbeb;
+            color: #d97706;
+        }
+        .status-judging {
+            background-color: #eef2ff;
+            color: #4f46e5;
+        }
+        .status-completed {
+            background-color: #f0fdf4;
+            color: #16a34a;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+<div class="flex h-screen">
+<aside class="w-64 bg-white shadow-md flex-shrink-0">
+<div class="p-6">
+<img alt="BitLabs Jobs Logo" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK5rn50uyQpGOhjiyPhNHDsadxTqK2Df31rUJQYXE7Lc8q8YPAgyL_9CCs5Ov88C9IEFATXzaxT9OJnrkW2b_KyeAeZw2gYv-wMjRmEY6QzeQ7xXTrjJR1om6OLcF5mDpYooIQvTHrTq4eFxHhLJABSK7DK2WbSwwpjAiSxL3y3HhBshMAXFRyRJUK43Mbh_mvD4OlrB8e4WaMd2iQAMvCWpvp3B2T55hwWiF0XxzdYlGullfOb7Oy-9oWeETNEFGffJmQvZebjRfH"/>
+</div>
+<nav class="mt-2 px-4">
+<a class="sidebar-item" href="#">
+<span class="material-icons mr-3">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="sidebar-item" href="#">
+<span class="material-icons mr-3">work_outline</span>
+<span>Recommended Jobs</span>
+</a>
+<a class="sidebar-item" href="#">
+<span class="material-icons mr-3">playlist_add_check</span>
+<span>Applied Jobs</span>
+</a>
+<a class="sidebar-item" href="#">
+<span class="material-icons mr-3">bookmark_border</span>
+<span>Saved Jobs</span>
+</a>
+<a class="sidebar-item" href="#">
+<span class="material-icons mr-3">description</span>
+<span>My Resume</span>
+</a>
+<a class="sidebar-item" href="#">
+<span class="material-icons mr-3">verified</span>
+<span>Verified Badges</span>
+<span class="ml-auto btn-new">New</span>
+</a>
+<div class="mt-4 pt-4 border-t border-gray-200">
+<a class="sidebar-item active" href="#">
+<span class="material-icons mr-3 text-white">emoji_events</span>
+<span>Hackathon</span>
+</a>
+</div>
+</nav>
+</aside>
+<div class="flex-1 flex flex-col overflow-hidden">
+<header class="bg-white shadow-sm flex justify-end items-center p-4">
+<div class="flex items-center space-x-4">
+<button class="relative">
+<span class="material-icons text-gray-600">notifications</span>
+<span class="absolute -top-1 -right-1 h-3 w-3 bg-red-500 rounded-full border-2 border-white"></span>
+</button>
+<div class="flex items-center space-x-2">
+<img alt="User avatar" class="h-8 w-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7LnOwBazR2rPg2tp64mxxsS1K3lY5T0fK-qxHgAfIWQOxl3ROK1C90KcyHwsb-dQgM6zkGPf-hiG3S499rRv1Yk1BHSx1qoqzNgn_7p5stD4H7zpumZkPzzE4gn2mAN77UJAofQDhkp9Bgih6YjO1729l41u464vS-E15RQ9AmdsH5YJsKBAtz0t06C4yH3vOOVOR0_FkLo1dz0JP1fq5y5xnHsELNNlrkn-VvrcjFbx2GBg6J2BG581QlNSudsWzGwIUabNQ2R28"/>
+<span class="material-icons text-gray-600">arrow_drop_down</span>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50 p-6">
+<h1 class="text-3xl font-semibold text-gray-800 mb-6">Registered Hackathons</h1>
+<div class="bg-white p-6 rounded-lg shadow-md card-font">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-xl font-semibold text-gray-800">Your Hackathons</h3>
+<div class="flex items-center space-x-4">
+<div class="relative">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+<input class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" placeholder="Search hackathons..." type="text"/>
+</div>
+<button class="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100">
+<span class="material-icons text-gray-600 text-base">filter_list</span>
+<span>Filter</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="border-b bg-gray-50 text-gray-600 text-sm">
+<th class="p-4 font-medium">Hackathon Title</th>
+<th class="p-4 font-medium">Registration Date</th>
+<th class="p-4 font-medium">Status</th>
+<th class="p-4 font-medium"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b hover:bg-gray-50">
+<td class="p-4">
+<div class="flex items-center space-x-4">
+<div class="bg-purple-100 p-3 rounded-lg">
+<span class="material-icons text-purple-500">developer_mode</span>
+</div>
+<div>
+<p class="font-semibold text-gray-800">DeFi Developers Challenge</p>
+<p class="text-sm text-gray-500">Stark Industries</p>
+</div>
+</div>
+</td>
+<td class="p-4 text-gray-700">June 15, 2024</td>
+<td class="p-4">
+<span class="status-badge status-pending">
+<span class="material-icons text-sm">hourglass_top</span>
+Pending Submission
+</span>
+</td>
+<td class="p-4">
+<button class="bg-orange-500 text-white font-medium py-2 px-4 rounded-lg hover:bg-orange-600 transition-colors duration-300">Submit Project</button>
+</td>
+</tr>
+<tr class="border-b hover:bg-gray-50">
+<td class="p-4">
+<div class="flex items-center space-x-4">
+<div class="bg-teal-100 p-3 rounded-lg">
+<span class="material-icons text-teal-500">health_and_safety</span>
+</div>
+<div>
+<p class="font-semibold text-gray-800">HealthTech Innovations 2024</p>
+<p class="text-sm text-gray-500">Wayne Enterprises</p>
+</div>
+</div>
+</td>
+<td class="p-4 text-gray-700">May 28, 2024</td>
+<td class="p-4">
+<span class="status-badge status-judging">
+<span class="material-icons text-sm">gavel</span>
+Judging in Progress
+</span>
+</td>
+<td class="p-4">
+<button class="bg-gray-200 text-gray-700 font-medium py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors duration-300">View Submission</button>
+</td>
+</tr>
+<tr class="border-b hover:bg-gray-50">
+<td class="p-4">
+<div class="flex items-center space-x-4">
+<div class="bg-pink-100 p-3 rounded-lg">
+<span class="material-icons text-pink-500">videogame_asset</span>
+</div>
+<div>
+<p class="font-semibold text-gray-800">Indie Game Dev Jam</p>
+<p class="text-sm text-gray-500">Oscorp</p>
+</div>
+</div>
+</td>
+<td class="p-4 text-gray-700">April 10, 2024</td>
+<td class="p-4">
+<span class="status-badge status-completed">
+<span class="material-icons text-sm">check_circle</span>
+Completed
+</span>
+</td>
+<td class="p-4">
+<button class="bg-green-500 text-white font-medium py-2 px-4 rounded-lg hover:bg-green-600 transition-colors duration-300">View Result</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex justify-between items-center mt-6">
+<span class="text-sm text-gray-600">Showing 1 to 3 of 3 results</span>
+<div class="flex items-center space-x-1">
+<button class="p-2 text-gray-500 hover:text-gray-800 disabled:opacity-50" disabled="">
+<span class="material-icons">chevron_left</span>
+</button>
+<button class="px-4 py-2 rounded-md bg-orange-500 text-white text-sm">1</button>
+<button class="p-2 text-gray-500 hover:text-gray-800 disabled:opacity-50">
+<span class="material-icons">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
